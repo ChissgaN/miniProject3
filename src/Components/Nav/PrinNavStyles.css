@@ -1,0 +1,76 @@
+.logoDiv {
+    width: 5vmin; 
+    height: 1.75vmin; 
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.OneButton {
+    display: flex;
+    width: 300px; 
+    height: 44px; 
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid rgba(242, 242, 242, 1);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.OneButton:hover {
+    border: 1px solid rgba(0, 0, 0, 1);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.OneButton > * {
+    height: 100%;
+}
+
+.OneButton span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.location{
+    font-family: 'Mulish', sans-serif;
+    font-size: 14px;
+}
+
+
+.add {
+    color: gray;
+    border-left: 1px solid rgba(242, 242, 242, 1);
+    border-right: 1px solid rgba(242, 242, 242, 1);
+    height: 6vmin;
+    width: 20vmin; 
+    font-family: 'Mulish', sans-serif;
+    font-weight: 400px;
+    font-size: 14px;
+}
+
+.search {
+    color: red;
+}
+
+@media (max-width: 600px) {
+    .nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .OneButton {
+      width: 100%;
+      margin-top: 50px;
+    }
+  
+    .add {
+      border: none;
+      width: 50%;
+      border-left: 1px solid rgba(242, 242, 242, 1); 
+      border-right: 1px solid rgba(242, 242, 242, 1);
+    }
+  }
+  

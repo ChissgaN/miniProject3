@@ -1,0 +1,14 @@
+.cardContainer {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
+  }
+
+  @media (max-width: 768px) {
+    .cardContainer li {
+      width: 100%;
+    }
+  }
+

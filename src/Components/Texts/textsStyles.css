@@ -1,0 +1,15 @@
+.stay{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    columns: rgba(51, 51, 51, 1);
+    ;
+}
+
+.pStay{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(79, 79, 79, 1);
+    ;
+}

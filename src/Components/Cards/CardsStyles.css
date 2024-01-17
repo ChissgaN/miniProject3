@@ -1,0 +1,45 @@
+.hotels {
+    width: 395px;
+  }
+
+.imgHotel {
+    width: 395px;
+    height: 269px;
+    border-radius: 24px;
+  }
+
+  .btnSuperHost {
+    background-color: transparent;
+    border-radius: 12px;
+    border: 1px solid #4f4f4f;
+    width: 100px;
+    height: 28px;
+    flex-shrink: 0;
+    margin: 10px 15px 10px 0px;
+    color: #4f4f4f;
+    
+  }
+  .btnDescription {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 0px 5px 0px;
+  }
+
+  .hotelsInfoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .divPunctuation {
+    display: flex;
+    align-items: center;
+  }
+  .star {
+    color: red;
+  }
+  
+  .descriptionRoom {
+    color: Gray;
+  }
