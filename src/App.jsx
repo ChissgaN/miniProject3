@@ -2,10 +2,11 @@ import { useState, useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import Star from "/star.svg";
-import PrincipalNav from './Components/Nav/PrincipalNav';
+import PrincipalNav, {Search} from './Components/Nav/PrincipalNav';
 import Texts from './Components/Texts/Texts';
 import Cards from './Components/Cards/Cards';
 import Footer from './Components/Footer/Footer';
+
 
 function App() {
   const [hotels, setHotels] = useState([]);
@@ -26,6 +27,7 @@ function App() {
   return (
     <div>
       <PrincipalNav/>
+      
       <Texts/>
       
       <ul className="d-flex list-group mt-5 cardContainer justify-content-center">
