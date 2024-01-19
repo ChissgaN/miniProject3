@@ -4,6 +4,8 @@ import "./PrinNavStyles.css";
 export default function PrincipalNav({
   searchValue,
   setSearchValue,
+  inpPeopleValue,
+  setInpPeopleValue,
   search,
   isSearchVisible,
   setIsSearchVisible,
@@ -37,8 +39,8 @@ export default function PrincipalNav({
           onClickCancel={clickCancel}
           searchValue={searchValue}
           setSearchValue={setSearchValue}
-          isSearchVisible={isSearchVisible}
-          setIsSearchVisible={setIsSearchVisible}
+          inpPeopleValue={inpPeopleValue}
+          setInpPeopleValue={setInpPeopleValue}
           search={search}
         />
       )}
@@ -50,6 +52,8 @@ export function Search({
   onClickCancel,
   searchValue,
   setSearchValue,
+  inpPeopleValue,
+  setInpPeopleValue,
   search,
 }) {
   const handleSearch = () => {
@@ -65,7 +69,7 @@ export function Search({
       <div className="d-flex rowSearh">
         <input
           className="pe-3 ps-3 inpLoca"
-          value={searchValue || ""} 
+          value={searchValue || ""}
           onChange={(e) => setSearchValue(e.target.value)}
           type="text"
           name=""
@@ -74,6 +78,8 @@ export function Search({
         />
         <input
           className="pe-3 ps-3 me-3 inpPeople"
+          value={inpPeopleValue || ""}
+          onChange={(e) => setInpPeopleValue(e.target.value)}
           type="text"
           placeholder="Add guests"
         />

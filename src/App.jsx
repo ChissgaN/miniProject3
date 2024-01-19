@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Star from "/star.svg";
@@ -10,7 +10,8 @@ import Footer from "./Components/Footer/Footer";
 function App() {
   const [categorias, setCategories] = useState([]);
   const [filteredCategories, setFilteredCategories] = useState([]);
-  const [searchValue, setSearchValue] = useState();
+  const [searchValue, setSearchValue] = useState("");
+  const [inpPeopleValue, setInpPeopleValue] = useState("");
   const [isSearchVisible, setIsSearchVisible] = useState(false);
 
   async function getData() {
@@ -25,9 +26,13 @@ function App() {
   }, []);
 
   const search = () => {
-    const data = categorias.filter((categoria) =>
-      categoria.city.toLowerCase().includes(searchValue.toLowerCase())
-    );
+    const data = categorias.filter((categoria) => {
+      const cityMatch = categoria.city.toLowerCase().includes(searchValue.toLowerCase());
+      const guestsMatch = inpPeopleValue === "" || categoria.maxGuests <= parseInt(inpPeopleValue);
+      
+      return cityMatch && guestsMatch;
+    });
+
     setFilteredCategories(data);
   };
 
@@ -36,6 +41,8 @@ function App() {
       <PrincipalNav
         searchValue={searchValue}
         setSearchValue={setSearchValue}
+        inpPeopleValue={inpPeopleValue}
+        setInpPeopleValue={setInpPeopleValue}
         search={search}
         isSearchVisible={isSearchVisible}
         setIsSearchVisible={setIsSearchVisible}
