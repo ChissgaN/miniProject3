@@ -17,6 +17,8 @@
     flex-shrink: 0;
     margin: 10px 15px 10px 0px;
     color: #4f4f4f;
+    background-color: red;
+    color: white;
     
   }
   .btnDescription {
