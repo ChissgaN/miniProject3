@@ -8,8 +8,8 @@ import Cards from "./Components/Cards/Cards";
 import Footer from "./Components/Footer/Footer";
 
 function App() {
-  const [categorias, setCategories] = useState([]);
-  const [filteredCategories, setFilteredCategories] = useState([]);
+  const [stays, setStays] = useState([]);
+  const [filteredStays, setFilteredStays] = useState([]);
   const [searchValue, setSearchValue] = useState("");
   const [inpPeopleValue, setInpPeopleValue] = useState("");
   const [isSearchVisible, setIsSearchVisible] = useState(false);
@@ -17,8 +17,8 @@ function App() {
   async function getData() {
     const fetchData = await fetch("stays.json");
     const datajson = await fetchData.json();
-    setCategories(datajson);
-    setFilteredCategories(datajson);
+    setStays(datajson);
+    setFilteredStays(datajson);
   }
 
   useEffect(() => {
@@ -26,14 +26,14 @@ function App() {
   }, []);
 
   const search = () => {
-    const data = categorias.filter((categoria) => {
-      const cityMatch = categoria.city.toLowerCase().includes(searchValue.toLowerCase());
-      const guestsMatch = inpPeopleValue === "" || categoria.maxGuests <= parseInt(inpPeopleValue);
+    const data = stays.filter((stay) => {
+      const cityMatch = stay.city.toLowerCase().includes(searchValue.toLowerCase());
+      const guestsMatch = inpPeopleValue === "" || stay.maxGuests <= parseInt(inpPeopleValue);
       
       return cityMatch && guestsMatch;
     });
 
-    setFilteredCategories(data);
+    setFilteredStays(data);
   };
 
   return (
@@ -51,8 +51,8 @@ function App() {
       <Texts />
 
       <ul className="d-flex list-group mt-5 cardContainer justify-content-center">
-        {filteredCategories &&
-          filteredCategories.map((hotel, index) => (
+        {filteredStays &&
+          filteredStays.map((hotel, index) => (
             <Cards
               key={index}
               imgHotel={hotel.photo}
@@ -71,3 +71,5 @@ function App() {
 }
 
 export default App;
+
+

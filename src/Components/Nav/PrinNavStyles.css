@@ -75,9 +75,6 @@
     }
   }
 
-
-/* Searching */
-
 .search-container {
     position: relative;
   }
@@ -138,4 +135,16 @@
 .btnSearch{
     height: 48px;
     align-items: center;
+}
+
+.opCities{
+    list-style: none;
+    color: rgba(79, 79, 79, 1);
+    width: 37.5%;
+}
+
+
+.liLocation{
+    font-size: 18px;
+    
 }
