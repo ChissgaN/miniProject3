@@ -28,7 +28,7 @@ function App() {
   const search = () => {
     const data = stays.filter((stay) => {
       const cityMatch = stay.city.toLowerCase().includes(searchValue.toLowerCase());
-      const guestsMatch = inpPeopleValue === "" || stay.maxGuests <= parseInt(inpPeopleValue);
+      const guestsMatch = inpPeopleValue === "" || stay.maxGuests >= parseInt(inpPeopleValue);
       
       return cityMatch && guestsMatch;
     });

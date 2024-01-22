@@ -72,7 +72,19 @@
       width: 50%;
       border-left: 1px solid rgba(242, 242, 242, 1); 
       border-right: 1px solid rgba(242, 242, 242, 1);
+    }  
+
+    .btnSearch{
+        width: 100%;
     }
+
+    .spanBtnSearch{
+        display: none;
+    }
+    .textSea{
+        display: none;
+    }
+
   }
 
 .search-container {
@@ -134,13 +146,26 @@
 
 .btnSearch{
     height: 48px;
+    width: 12%;
     align-items: center;
+    margin-left: 5%;
+}
+
+
+
+.searchDivSecond{
+    width: 100%;
+
+}
+
+.searchUl{
+    width: 37.5%;
 }
 
 .opCities{
     list-style: none;
     color: rgba(79, 79, 79, 1);
-    width: 37.5%;
+    width: 100%;
 }
 
 
@@ -148,3 +173,77 @@
     font-size: 18px;
     
 }
+
+.container{
+    width: 37.5%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.contenedorAdultos {
+    width: 100%;
+}
+
+.contenedorNiños {
+    margin: 25px 0px;
+    width: 100%;
+}
+
+.marcador {
+    display: flex;
+}
+
+.numContador {
+    margin: 0px 10px;
+    border: saddlebrown solid;
+}
+
+.contenedorAdultos>.marcador>button {
+    width: 23px;
+    height: 23px;
+    top: 244px;
+    left: 537px;
+    border-radius: 4px;
+    border: 1px solid #828282;
+    color: #828282;
+}
+
+.contenedorAdultos>.marcador>button:hover {
+    border: 1px solid white;
+    background-color: #d8d8d8;
+    color: white;
+    transition: 0.4s;
+}
+
+.contenedorAdultos>.edad {
+    color: #bdbdbd;
+    font-size: 12px;
+}
+
+.contenedorNiños>.marcador>button {
+    width: 23px;
+    height: 23px;
+    top: 244px;
+    left: 537px;
+    border-radius: 4px;
+    border: 1px solid #828282;
+    color: #828282;
+}
+
+.contenedorNiños>.marcador>button:hover {
+    border: 1px solid white;
+    background-color: #d8d8d8;
+    color: white;
+    transition: 0.4s;
+}
+
+.contenedorNiños>.edad {
+    margin-top: 0;
+    font-size: 12px;
+    color: #bdbdbd;
+}
+
+.NcontadorA {
+    margin: 0px 10px;
+}
+
