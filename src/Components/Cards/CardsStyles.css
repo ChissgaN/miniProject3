@@ -17,15 +17,30 @@
     flex-shrink: 0;
     margin: 10px 15px 10px 0px;
     color: #4f4f4f;
-    background-color: red;
-    color: white;
-    
   }
+
+  .hotels:hover{
+    .btnSuperHost {
+      background-color: #eb5757e5;
+      border: none;
+      color: white;
+      transition: 0.4s;
+    }
+    }
+
+
   .btnDescription {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0px 0px 5px 0px;
+  }
+
+  .btnAndDescription {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px;
   }
 
   .hotelsInfoContainer {
@@ -45,3 +60,7 @@
   .descriptionRoom {
     color: Gray;
   }
+
+
+  
+  

@@ -61,6 +61,7 @@ function App() {
               star={Star}
               punctuation={hotel.rating}
               descriptionOfRoom={hotel.title}
+              beds={hotel.beds}
             />
           ))}
       </ul>
